@@ -2,7 +2,11 @@
   <div class="wrapper-display">
     <div class="display">
       <div class="display-number">
-        {{numberOne}} {{action}} {{numberTwo}} {{result}}
+        <div v-if="showResult === false">
+          {{numberOne}} {{action}} {{numberTwo}}
+        </div>
+
+        <div v-else>{{result}}</div>
       </div>
     </div>
   </div>
@@ -11,7 +15,7 @@
 
 export default {
   name: "Display",
-  props:["numberOne", "action", "numberTwo", "result"]
+  props:["numberOne", "action", "numberTwo", "result","showResult"]
 }
 </script>
 
