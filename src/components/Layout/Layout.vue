@@ -9,16 +9,7 @@
           v-bind:showResult="showResult"
       />
       <Number
-          v-on:one="one"
-          v-on:two="two"
-          v-on:three="three"
-          v-on:four="four"
-          v-on:five="five"
-          v-on:six="six"
-          v-on:seven="seven"
-          v-on:eight="eight"
-          v-on:nine="nine"
-          v-on:zero="zero"
+          v-on:num="num"
 
           v-on:plus="plus"
           v-on:final="final"
@@ -49,12 +40,9 @@ export default {
     }
   },
   methods: {
-
-
-    one(e) {
+    num(e) {
       this.showResult = false
       this.result = 0
-      // console.log(typeof this.numberOne)
       if (this.action === '') {
         this.numberOne += e
       } else {
@@ -62,89 +50,6 @@ export default {
       }
 
     },
-
-    two(e) {
-      this.showResult = false
-      this.result = 0
-      if (this.action === '') {
-        this.numberOne += e
-      } else {
-        this.numberTwo += e
-      }
-    },
-    three(e) {
-      this.showResult = false
-      this.result = 0
-      if (this.action === '') {
-        this.numberOne += e
-      } else {
-        this.numberTwo += e
-      }
-    },
-    four(e) {
-      this.showResult = false
-      this.result = 0
-      if (this.action === '') {
-        this.numberOne += e
-      } else {
-        this.numberTwo += e
-      }
-    },
-    five(e) {
-      this.showResult = false
-      this.result = 0
-      if (this.action === '') {
-        this.numberOne += e
-      } else {
-        this.numberTwo += e
-      }
-    },
-    seven(e) {
-      this.showResult = false
-      this.result = 0
-      if (this.action === '') {
-        this.numberOne += e
-      } else {
-        this.numberTwo += e
-      }
-    },
-    eight(e) {
-      this.showResult = false
-      this.result = 0
-      if (this.action === '') {
-        this.numberOne += e
-      } else {
-        this.numberTwo += e
-      }
-    },
-    nine(e) {
-      this.showResult = false
-      this.result = 0
-      if (this.action === '') {
-        this.numberOne += e
-      } else {
-        this.numberTwo += e
-      }
-    },
-    six(e) {
-      this.showResult = false
-      this.result = 0
-      if (this.action === '') {
-        this.numberOne += e
-      } else {
-        this.numberTwo += e
-      }
-    },
-    zero(e) {
-      this.showResult = false
-      this.result = 0
-      if (this.action === '') {
-        this.numberOne += e
-      } else {
-        this.numberTwo += e
-      }
-    },
-
     plus(e) {
       if(this.numberOne !== ""){
         this.action = e
@@ -196,7 +101,7 @@ export default {
 .wrapper-calc {
   text-align: center;
   margin: 0 auto;
-  width: 40%;
+  width: 30%;
   background-color: #ccc;
 }
 

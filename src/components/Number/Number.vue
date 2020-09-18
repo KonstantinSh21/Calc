@@ -1,20 +1,20 @@
 <template>
   <div class="wrapper-num">
-    <div v-on:click="$emit('one', 1)" class="num">1</div>
-    <div v-on:click="$emit('two', 2)" class="num">2</div>
-    <div v-on:click="$emit('three', 3)" class="num">3</div>
-    <div v-on:click="$emit('plus', '+')" class="num">+</div>
-    <div v-on:click="$emit('plus', '-')" class="num">-</div>
-    <div v-on:click="$emit('four', 4)" class="num">4</div>
-    <div v-on:click="$emit('five', 5)" class="num">5</div>
-    <div v-on:click="$emit('six', 6)" class="num">6</div>
-    <div v-on:click="$emit('plus', '*')" class="num">x</div>
-    <div v-on:click="$emit('plus', '/')" class="num">/</div>
-    <div v-on:click="$emit('seven', 7)" class="num">7</div>
-    <div v-on:click="$emit('eight', 8)" class="num">8</div>
-    <div v-on:click="$emit('nine', 9)" class="num">9</div>
-    <div v-on:click="$emit('zero', 0)" class="num">0</div>
-    <div v-on:click="$emit('final')" class="num">=</div>
+    <div v-on:click="$emit('num', 1)" class="num"><span>1</span></div>
+    <div v-on:click="$emit('num', 2)" class="num"><span>2</span></div>
+    <div v-on:click="$emit('num', 3)" class="num"><span>3</span></div>
+    <div v-on:click="$emit('plus', '+')" class="num"><span>+</span></div>
+    <div v-on:click="$emit('plus', '-')" class="num"><span>-</span></div>
+    <div v-on:click="$emit('num', 4)" class="num"><span>4</span></div>
+    <div v-on:click="$emit('num', 5)" class="num"><span>5</span></div>
+    <div v-on:click="$emit('num', 6)" class="num"><span>6</span></div>
+    <div v-on:click="$emit('plus', '*')" class="num"><span>*</span></div>
+    <div v-on:click="$emit('plus', '/')" class="num"><span>/</span></div>
+    <div v-on:click="$emit('num', 7)" class="num"><span>7</span></div>
+    <div v-on:click="$emit('num', 8)" class="num"><span>8</span></div>
+    <div v-on:click="$emit('num', 9)" class="num"><span>9</span></div>
+    <div v-on:click="$emit('num', 0)" class="num"><span>0</span></div>
+    <div v-on:click="$emit('final')" class="num"><span>=</span></div>
   </div>
 </template>
 <script>
@@ -26,7 +26,7 @@ export default {
 
 <style>
 .wrapper-num{
-  padding-top: 40px;
+  padding-top: 10px;
   background-color: #888;
   width: 100%;
   display: flex;
@@ -34,8 +34,18 @@ export default {
   padding-bottom: 10px;
 }
 .num{
-  flex: 1 1 20%;
+  flex: 1 1 15%;
   height: 40px;
+  background-color: #999;
+  margin: 10px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.num span{
+  display: block;
+  padding-top: 5px;
+  margin: auto 0;
+  font-size: 22px;
 }
 
 
